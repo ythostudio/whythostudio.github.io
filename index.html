@@ -5,12 +5,12 @@
   <title>Why Tho Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Reset + base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
@@ -20,23 +20,31 @@
 
     /* Top Bar */
     .top-bar {
-      background: white;
-      color: #333;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark */
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 10px 30px;
       height: 70px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
     }
 
     .logo {
-      height: 50px;
+      height: 60px;
       cursor: pointer;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.7));
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
     }
 
     .nav-links a {
-      color: #333;
+      color: #ccc;
       text-decoration: none;
       margin-left: 30px;
       font-size: 14px;
@@ -45,7 +53,7 @@
     }
 
     .nav-links a:hover {
-      color: #555;
+      color: #fff;
     }
 
     /* Main content */
