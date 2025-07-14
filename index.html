@@ -1,27 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Why Tho Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Reset + base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
       color: white;
-      font-family: sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: white;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      height: 70px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      height: 50px;
+      cursor: pointer;
+    }
+
+    .nav-links a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #555;
+    }
+
+    /* Main content */
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 100px;
+      padding: 100px 20px;
     }
+
     h1 {
-      font-size: 60px;
+      font-size: 56px;
+      background: linear-gradient(to right, #999, #ccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
     }
+
     p {
       font-size: 20px;
-      color: #ccc;
+      color: #aaa;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+      .nav-links a {
+        margin-left: 15px;
+        font-size: 12px;
+      }
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Why Tho Studio</h1>
-  <p>We make brutally hard games.</p>
+
+  <!-- Top Navigation Bar -->
+  <div class="top-bar">
+    <a href="/">
+      <img src="logo.png" alt="Why Tho Studio Logo" class="logo">
+    </a>
+    <div class="nav-links">
+      <a href="#">Contact</a>
+      <a href="#">Support</a>
+      <a href="#">Help</a>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main">
+    <h1>Welcome to Why Tho Studio</h1>
+    <p>We make brutally hard games.</p>
+  </div>
+
 </body>
 </html>
-
